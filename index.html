@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Keeley Beeden VR</title>
+<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script> 
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+</head>
+<!-- This is the main body of the website- ALL your content goes AFTER the <body> tag and before the /body> tag -->
+<body>
+<a-scene>
+    <a-assets>
+        <img id="floor" src="images/Floor.png.png" title="image by denizecenci from Pixabay" preload="auto">
+         <img id="floor" src="images/wallpapper2.jpg" title="image by Placidplace from Pixabay" preload="auto">
+          <img id="art1" src="images/flower.jpg" title="Image by nvd9612 from Pixabay"preload="auto">
+           <img id="art2" src="images/Hydranger.png" preload="auto">
+            <img id="art3" src="images/art.jpg" title="Image by Alexas_Fotos from Pixabay"preload="auto">
+             <img id="art4" src="images/Hobbyplanet.png" tiitle="Inage by Keeeley Beeden"preload="auto">
+             <img id="frame" src="images/frame" preload="auto">
+    </a-assets>
+    <a-entity environment="preset:starry;dressingAmount:100000;skyColor:navy"></a-entity>
+    <!-- Museum start -->
+<a-cylinder id="floor" position="0 0 0" radius="7.5" src="#floor" height="0.1"></a-cylinder>
+<a-box id="wall1" position="0 1.473 4.907" rotation="0 0 0" scale="10 3 0.2" src="images/wallpapper2.jpg"></a-box>
+<a-box id="wall2" position="0 1.473 -4.907" rotation="0 0 0" scale="10 3 0.2" src="images/wallpapper2.jpg"></a-box>
+<a-box id="wall3" position="5.049 1.454 -0.008" rotation="0 -90 0" scale="10 3 0.2" src="images/wallpapper2.jpg"></a-box>
+<a-box id="wall4" position="-5.049 1.454 -0.008" rotation="0 -90 0" scale="10 3 0.2" src="images/wallpapper2.jpg"></a-box>
+<!--Roof-->
+<a-cylinder id="triangle_front" segments-radial="3" position="0 3.874 4.907" rotation="-90 0 0" scale="5.774 0.2 1.8" color="#467599"></a-cylinder>
+<a-cylinder id="triangle_back" segments-radial="3" position="0 3.874 -4.907" rotation="-90 0 0" scale="5.774 0.2 1.8" color="#467599"></a-cylinder>
+<a-box id="roof_right" position="2.580 4.328 0" rotation="28.433 90 0" scale="10.931 0.20 6.110" color="#386FA4"></a-box>
+<a-box id="roof_left" position="-2.599 4.321 -0.017" rotation="28.433 -90 0" scale="10.931 0.20 6.130" color="#386FA4"></a-box>
+
+<!-- ART -->
+<a-plane id="art1" src="#art1" scale="2 2 0.05" rotation="0 0 0" position="-0.162 1.934 -4.792"></a-plane>
+<a-plane id="art2" src="#art2" scale="2 2 0.05" rotation="0 -90 0" position="4.755 1.826 0.560"></a-plane>
+<a-plane id="art3" src="#art3" scale="2 2 0.05" rotation="0 90 0" position="-4.948 1.934 0.101"></a-plane>
+<a-plane id="art4" src="#art4" scale="2 2 0.05" rotation="0 180 0" position="-0.940 1.934 4.785"></a-plane>
+
+<!--world-->
+<a-box id="wall1" position="6.515 1.866 11.421" rotation="0 90 0" scale="5 12 0.2" src="images/wallpapper2.jpg"></a-box>
+<a-box id="wall2" position="-5.361 1.929 11.876" rotation="0 90 0" scale="5 12 0.2" src="images/wallpapper2.jpg"></a-box>
+<a-box id="wall3" position="0.466 7.428 11.855" rotation="90 -180 90" scale="5 12 0.2" src="images/wallpapper2.jpg"></a-box>
+<a-cylinder id="ship" position="22.404 0.000 10.205" radius="6.5" color="#33658A" hight="0.1"></a-cylinder>
+<a-cylinder id="up" position="22.280 4.277 10.080" radius="4" color="#33658A" hight="0.1"></a-cylinder>
+
+
+
+
+
+</body>
+</html>
