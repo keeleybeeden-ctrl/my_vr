@@ -8,6 +8,7 @@
     <title>Keeley Beeden VR</title>
 <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script> 
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <!-- This is the main body of the website- ALL your content goes AFTER the <body> tag and before the /body> tag -->
 <body>
@@ -20,6 +21,13 @@
             <img id="art3" src="images/art.jpg" title="Image by Alexas_Fotos from Pixabay"preload="auto">
              <img id="art4" src="images/Hobbyplanet.png" tiitle="Inage by Keeeley Beeden"preload="auto">
              <img id="frame" src="images/frame" preload="auto">
+             <!-- Video -->
+<video id="videoclip" loop="true"src="rocket video.mp4" crossorigin="NASA-Imagery" preload="auto"></video>
+<!-- Buttons and Background -->
+  <img id="play" src="tvAssets/btnPlay.png" preload="auto">
+  <img id="pause" src="tvAssets/btnPause.png" preload="auto">
+  <img id="tv_background" src="tvAssets/tv_background.jpg"preload="auto">
+
     </a-assets>
     <a-entity environment="preset:starry;dressingAmount:100000;skyColor:navy"></a-entity>
     <!-- Museum start -->
@@ -46,10 +54,37 @@
 <a-box id="wall3" position="0.466 7.428 11.855" rotation="90 -180 90" scale="5 12 0.2" src="images/wallpapper2.jpg"></a-box>
 <a-cylinder id="ship" position="22.404 0.000 10.205" radius="6.5" color="#33658A" hight="0.1"></a-cylinder>
 <a-cylinder id="up" position="22.280 4.277 10.080" radius="4" color="#33658A" hight="0.1"></a-cylinder>
+<a-box id="wall5" position="-5.103 4.313 -0.067" rotation="0 -90 0" scale="10 3 0.2" src="images/wallpapper2.jpg"></a-box>
+<a-box id="wall6" position="-10.024 2.260 -4.943" rotation="0 -180 0" scale="10 7 0.2" src="images/wallpapper2.jpg"></a-box>
+<a-box id="wall7" position="-14.826 2.260 -0.046" rotation="0 -90 0" scale="10 6 0.2" src="images/wallpapper2.jpg"></a-box>
+<a-box id="floor2" position="-9.954 2.704 -2.014" rotation="90 -180 180" scale="10 6 0.2" src="images/wallpapper2.jpg"></a-box>
+
+<!--3D object-->
+<a-obj-model id="3dModel1" src="images/tinker.obj" mtl="images/obj.mtl" position="21.668 4.763 10.353" rotation="-90 0 0" scale="0.05 0.05 0.05"></a-obj-model>
+<a-obj-model id="3dModel2" src="images/tinker1.obj" mtl="images/obj1.mtl" position="19.651 -2.121 7.276" rotation="-90 0 0" scale="0.1 0.1 0.1"></a-obj-model>
+<a-obj-model id="3dModel3" src="images/tinker3.obj" mtl="images/obj3.mtl" position="6.087 -0.096 12.410" rotation="-90 180 0" scale="0.05 0.05 0.05"></a-obj-model>
+<a-obj-model id="3dModel4" src="images/tinker4.obj" mtl="images/obj.mtl" position="-12.548 0.222 3.469" rotation="-90 -90 0" scale="0.05 0.05 0.05"></a-obj-model>
+<!--TV-->
+<!-- TV with Play and Pause -->
+<a-entity>
+  <a-video src="#videoclip" position="-5.203 1.929 11.876" rotation="0 90 0" width="2" height="1.125"></a-video>
+  <!-- TV background -->
+  <a-plane id="videoControls" position="-5.220 1.171 11.887" scale="2 0.386 1.714" rotation="0 90 0" opacity="1" src="#tv_background">
+    <!-- Play button -->
+    <a-plane id="vidplaybox" src="#play" scale="0.122 0.678 0.122" position="-0.350 0 .01" shader="flat" transparent="true" videoplayer></a-plane>
+    <!-- Stop button -->
+    <a-plane id="vidpausebox" src="#pause" scale="0.122 0.678 0.122" position="0.350 0 .01" shader="flat" transparent="true" videopauser></a-plane>
+  </a-plane>
+</a-entity>
+<!-- Allows clicking with the mouse -->
+<a-entity cursor="rayOrigin: mouse"></a-entity>
 
 
 
 
 
+
+
+</a-scene>
 </body>
 </html>
